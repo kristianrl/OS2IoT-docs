@@ -412,6 +412,13 @@ exponential back-off. Or an API exposing all messages which have not
 been acknowledged by the receiver, for a short period of time (for
 instance 3 days like SigFox).
 
+**Example**
+
+- Datatarget: ``Colour by Numbers TEST``
+- Datatarget URL: ``https://nodered.servername.dk/cultureclub`` (in this example, your `Node-RED HTTP endpoint <https://cookbook.nodered.org/http/create-an-http-endpoint>`_ is set up with the Method ``POST`` and the URL ``cultureclub``)
+- Timeout: ``30000``
+- Authorization header: ``S2FybWE6Q2hhbWVsZW9u`` (Base64-encoding of a string in the format ``username:password``. Note that `Node-RED's httpStaticAuth object <https://nodered.org/docs/user-guide/runtime/configuration>`_ (where the relevant username and password is defined) uses the bcrypt algorithm)
+
 MQTT
 ^^^^^^^^^^^^^^^^
 
